@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fix SigFapergs",
+  "description": "This extension suppress time requests to server",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://sig.fapergs.rs.gov.br/*"],
+      "js" : ["js_fix.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "http://sig.fapergs.rs.gov.br/*"
+  ]
+}
